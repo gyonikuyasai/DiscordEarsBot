@@ -279,7 +279,7 @@ async function connect(msg, mapKey) {
         guildMap.set(mapKey, {
             'text_Channel': text_Channel,
             'voice_Connection': voice_Connection,
-            'selected_lang': 'en',
+            'selected_lang': 'ja',
             'debug': false,
         });
         speak_impl(voice_Connection.receiver, mapKey)
@@ -340,7 +340,7 @@ function speak_impl(receiver, mapKey) {
             console.log("duration: " + duration)
 
             if (SPEECH_METHOD === 'witai' || SPEECH_METHOD === 'google') {
-            if (duration < 1.0 || duration > 19) { // 20 seconds max dur
+            if (duration < 0.3 || duration > 19) { // 20 seconds max dur
                 console.log("TOO SHORT / TOO LONG; SKPPING")
                 return;
             }
