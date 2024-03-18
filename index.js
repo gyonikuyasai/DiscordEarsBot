@@ -302,6 +302,7 @@ if (SPEECH_METHOD === 'vosk') {
   // MODELS: https://alphacephei.com/vosk/models
   recs = {
     'en': new vosk.Recognizer({model: new vosk.Model('vosk_models/en'), sampleRate: 48000}),
+    'ja': new vosk.Recognizer({model: new vosk.Model('vosk_models/ja'), sampleRate: 48000}),
     // 'fr': new vosk.Recognizer({model: new vosk.Model('vosk_models/fr'), sampleRate: 48000}),
     // 'es': new vosk.Recognizer({model: new vosk.Model('vosk_models/es'), sampleRate: 48000}),
   }
